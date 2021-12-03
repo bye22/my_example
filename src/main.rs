@@ -1,21 +1,25 @@
 #![crate_name = "my_example"]
 
-use std::mem;
+#![allow(unused)]
+
 fn main() {
+    let a="";
+
 }
 
 #[cfg(test)]
-mod tests {
+mod tests11 {
 
     #[test]
-    fn test_slice() {}
+    fn test_slice() {
+        
+    }
     ///
     /// String &str
     ///
     /// String (Vec<u8> UTF-8序列) 堆分配 可增长 且非零结尾
     /// &str (&[u8]) 指向有效 UTF-8序列 的切片 并可查看String内容
     ///
-    #[allow(dead_code)]
     #[test]
     fn test_string() {
         //""
@@ -43,7 +47,6 @@ mod tests {
     /// * 运算符 (解箱)解引用 移除一层装箱
     /// Box::new(T) (装箱)
     ///
-    #[allow(dead_code)]
     #[test]
     fn test_box() {
         let boxed = Box::new(Box::new("sdaf"));
